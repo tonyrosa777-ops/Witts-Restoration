@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import FadeUp from "@/components/animations/FadeUp";
 import StaggerContainer, {
@@ -11,6 +12,7 @@ interface Article {
   slug: string;
   excerpt: string;
   category: string;
+  image?: string;
 }
 
 interface Props {
@@ -75,6 +77,26 @@ export default function BlogPostClient({
           </FadeUp>
         </div>
       </section>
+
+      {/* ── Header Image ── */}
+      {article.image && (
+        <section className="pb-4 md:pb-8">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+            <FadeUp delay={0.05}>
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 896px"
+                  priority
+                />
+              </div>
+            </FadeUp>
+          </div>
+        </section>
+      )}
 
       {/* ── Article Body (placeholder) ── */}
       <section className="py-8 md:py-12">
@@ -198,42 +220,62 @@ export default function BlogPostClient({
                   className="group block h-full"
                 >
                   <div
-                    className="flex h-full flex-col rounded-xl border p-6 transition-colors duration-300 group-hover:border-[rgba(212,160,23,0.2)]"
+                    className="flex h-full flex-col overflow-hidden rounded-xl border transition-colors duration-300 group-hover:border-[rgba(212,160,23,0.2)]"
                     style={{
                       background: "var(--bg-card)",
                       borderColor: "rgba(245,245,245,0.05)",
                     }}
                   >
-                    <p
-                      className="mb-2 text-xs font-medium uppercase tracking-[0.1em]"
-                      style={{
-                        fontFamily: "var(--font-mono)",
-                        color: "var(--accent)",
-                      }}
-                    >
-                      {rel.category}
-                    </p>
-                    <h3
-                      className="mb-3 text-lg font-bold leading-tight"
-                      style={{
-                        fontFamily: "var(--font-display)",
-                        color: "var(--text-primary)",
-                      }}
-                    >
-                      {rel.title}
-                    </h3>
-                    <p
-                      className="flex-1 text-sm leading-relaxed"
-                      style={{ color: "var(--text-secondary)" }}
-                    >
-                      {rel.excerpt}
-                    </p>
-                    <span
-                      className="mt-4 inline-flex text-sm font-semibold transition-colors group-hover:text-[var(--accent)]"
-                      style={{ color: "var(--text-primary)" }}
-                    >
-                      Read More &rarr;
-                    </span>
+                    {rel.image && (
+                      <div className="relative aspect-[16/9] w-full overflow-hidden">
+                        <Image
+                          src={rel.image}
+                          alt={rel.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, 400px"
+                        />
+                        <div
+                          className="absolute inset-0"
+                          style={{
+                            background:
+                              "linear-gradient(to top, var(--bg-card) 0%, transparent 50%)",
+                          }}
+                        />
+                      </div>
+                    )}
+                    <div className="flex flex-1 flex-col p-6">
+                      <p
+                        className="mb-2 text-xs font-medium uppercase tracking-[0.1em]"
+                        style={{
+                          fontFamily: "var(--font-mono)",
+                          color: "var(--accent)",
+                        }}
+                      >
+                        {rel.category}
+                      </p>
+                      <h3
+                        className="mb-3 text-lg font-bold leading-tight"
+                        style={{
+                          fontFamily: "var(--font-display)",
+                          color: "var(--text-primary)",
+                        }}
+                      >
+                        {rel.title}
+                      </h3>
+                      <p
+                        className="flex-1 text-sm leading-relaxed"
+                        style={{ color: "var(--text-secondary)" }}
+                      >
+                        {rel.excerpt}
+                      </p>
+                      <span
+                        className="mt-4 inline-flex text-sm font-semibold transition-colors group-hover:text-[var(--accent)]"
+                        style={{ color: "var(--text-primary)" }}
+                      >
+                        Read More &rarr;
+                      </span>
+                    </div>
                   </div>
                 </Link>
               </StaggerItem>

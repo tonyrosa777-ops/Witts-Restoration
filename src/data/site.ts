@@ -911,6 +911,7 @@ export const blogArticles = [
     excerpt:
       "Real pricing breakdowns for local tows, long-distance hauls, and winch-outs in northern NH. No other company in the region publishes this information.",
     category: "Towing",
+    image: "/images/blog/towing-cost-guide-nh.webp",
   },
   {
     title: "What to Do If You Break Down on Route 3 in Coos County",
@@ -918,6 +919,7 @@ export const blogArticles = [
     excerpt:
       "A step-by-step guide for handling a breakdown on one of New Hampshire's most remote highway stretches. Cell dead zones, nearest service points, and safety tips.",
     category: "Towing",
+    image: "/images/blog/break-down-route-3-coos-county.webp",
   },
   {
     title: "The Complete Guide to Vehicle Rust Repair in New Hampshire",
@@ -925,6 +927,7 @@ export const blogArticles = [
     excerpt:
       "How road salt destroys your truck, the stages of rust damage, when to repair vs. replace, and what rust repair actually costs in northern NH.",
     category: "Auto Body",
+    image: "/images/blog/vehicle-rust-repair-guide-nh.webp",
   },
   {
     title: "Snowmobile Broke Down on the Trail? Here's What to Do",
@@ -932,6 +935,7 @@ export const blogArticles = [
     excerpt:
       "What to do when your sled dies on Ride the Wilds or any northern NH trail system. Safety steps, common trail-side fixes, and when to call for help.",
     category: "Snowmobile & ATV",
+    image: "/images/blog/snowmobile-trail-breakdown-guide.webp",
   },
   {
     title: "Why a Mobile Mechanic Makes Sense in Rural New Hampshire",
@@ -939,6 +943,7 @@ export const blogArticles = [
     excerpt:
       "When the nearest shop is 45 minutes away, a mobile mechanic who comes to your driveway saves time, money, and the cost of a tow.",
     category: "Mobile Mechanic",
+    image: "/images/blog/mobile-mechanic-rural-nh.webp",
   },
   {
     title: "Off-Road Vehicle Recovery: What to Expect in Northern NH",
@@ -946,6 +951,7 @@ export const blogArticles = [
     excerpt:
       "Logging roads, mud season, and remote terrain. What off-road recovery involves, what it costs, and how to prepare for the worst.",
     category: "Towing",
+    image: "/images/blog/off-road-recovery-northern-nh.webp",
   },
   {
     title: "Pre-Season Snowmobile Maintenance Checklist for NH Riders",
@@ -953,6 +959,7 @@ export const blogArticles = [
     excerpt:
       "Everything you should check, replace, and tune before hitting the trails. Clutch, carbs, chain case, track tension, and more.",
     category: "Snowmobile & ATV",
+    image: "/images/blog/snowmobile-maintenance-checklist.webp",
   },
   {
     title: "Failed NH Inspection for Rust? Here Are Your Options",
@@ -960,6 +967,7 @@ export const blogArticles = [
     excerpt:
       "What to do when your truck fails inspection because of rust. Repair options, typical costs, and how to find a body shop that does real metalwork.",
     category: "Auto Body",
+    image: "/images/blog/failed-nh-inspection-rust.webp",
   },
   {
     title: "How to Choose a Towing Company You Can Trust",
@@ -967,6 +975,7 @@ export const blogArticles = [
     excerpt:
       "What to look for in a towing company before you need one. Licensing, insurance, safety records, and the questions most people forget to ask.",
     category: "Towing",
+    image: "/images/blog/choose-towing-company-trust.webp",
   },
   {
     title: "Diesel Truck Repair in Northern NH: What Shops Won't Tell You",
@@ -974,6 +983,7 @@ export const blogArticles = [
     excerpt:
       "Powerstroke and Duramax owners know the struggle. Most shops won't touch your diesel. Here's what to look for and what common repairs actually cost.",
     category: "Mechanical Repair",
+    image: "/images/blog/diesel-truck-repair-northern-nh.webp",
   },
 ];
 
