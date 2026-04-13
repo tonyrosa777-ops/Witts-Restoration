@@ -6,7 +6,7 @@ import StickyCallBar from "@/components/layout/StickyCallBar";
 import { CartProvider } from "@/lib/cart";
 import CartDrawer from "@/components/CartDrawer";
 import JsonLd from "@/components/JsonLd";
-import RisingAsh from "@/components/animations/RisingAsh";
+
 import "./globals.css";
 
 const barlowCondensed = Barlow_Condensed({
@@ -58,13 +58,10 @@ export default function RootLayout({
       <head>
         <JsonLd />
       </head>
-      <body className="relative min-h-full flex flex-col pb-16 md:pb-0">
-        <div className="fixed inset-0 z-0 pointer-events-none">
-          <RisingAsh />
-        </div>
+      <body className="min-h-full flex flex-col pb-16 md:pb-0">
         <CartProvider>
           <Header />
-          <main className="relative z-10 flex-1">{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
           <StickyCallBar />
           <CartDrawer />

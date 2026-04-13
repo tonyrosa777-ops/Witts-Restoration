@@ -5,6 +5,7 @@ import SlideIn from "@/components/animations/SlideIn";
 import CountUp from "@/components/animations/CountUp";
 import FadeIn from "@/components/animations/FadeIn";
 import Link from "next/link";
+import RisingAsh from "@/components/animations/RisingAsh";
 
 interface AboutProps {
   siteConfig: { name: string };
@@ -29,13 +30,14 @@ export default function AboutClient({ siteConfig, about, stats, meta, cta }: Abo
     <>
       {/* Page Header */}
       <section
-        className="py-16 md:py-24"
+        className="relative overflow-hidden py-16 md:py-24"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
-        <div className="mx-auto max-w-7xl px-6">
+        <RisingAsh />
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
           <FadeUp>
             <h1 className="hero-shimmer font-display text-display text-center">
               About {siteConfig.name}

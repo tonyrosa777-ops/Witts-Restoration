@@ -5,6 +5,7 @@ import FadeUp from "@/components/animations/FadeUp";
 
 import FadeIn from "@/components/animations/FadeIn";
 import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
+import RisingAsh from "@/components/animations/RisingAsh";
 
 interface Testimonial {
   name: string;
@@ -35,13 +36,14 @@ export default function TestimonialsClient({ testimonials, meta, cta }: Props) {
     <>
       {/* Featured Quote Header */}
       <section
-        className="py-16 md:py-24"
+        className="relative overflow-hidden py-16 md:py-24"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
-        <div className="mx-auto max-w-4xl px-6 text-center">
+        <RisingAsh />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
             <h1 className="hero-shimmer font-display text-display mb-8">
               Testimonials

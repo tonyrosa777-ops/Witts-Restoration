@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { siteConfig, meta } from "@/data/site";
+import RisingAsh from "@/components/animations/RisingAsh";
 
 interface ServiceArea {
   town: string;
@@ -36,6 +37,7 @@ export default function ServiceAreasClient({
               "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
           }}
         />
+        <RisingAsh />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.p
             initial={{ opacity: 0, y: 12 }}

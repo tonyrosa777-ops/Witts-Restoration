@@ -8,6 +8,7 @@ import StaggerContainer, {
 } from "@/components/animations/StaggerContainer";
 
 import { siteConfig } from "@/data/site";
+import RisingAsh from "@/components/animations/RisingAsh";
 
 // ── Gallery data (seeded — replace with real photos post-launch) ──
 // [DEMO COPY — pending client review]
@@ -155,13 +156,14 @@ export default function GalleryClient() {
     <>
       {/* ── Page Header ── */}
       <section
-        className="py-16 md:py-24"
+        className="relative overflow-hidden py-16 md:py-24"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
-        <div className="mx-auto max-w-4xl px-6 text-center">
+        <RisingAsh />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
             <h1 className="hero-shimmer font-display text-display mb-6">
               Gallery

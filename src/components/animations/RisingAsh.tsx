@@ -1,7 +1,6 @@
 "use client";
-// Rising Gold Ash — full-viewport ambient particle canvas
-// ~40 particles drift upward and fade, gold-tinted on dark backgrounds
-// Mobile: reduced count, respects prefers-reduced-motion
+// Rising Gold Ash — ambient particle canvas for page headers
+// Fills its parent container. Parent must be relative + overflow-hidden.
 
 import { useEffect, useRef } from "react";
 
@@ -22,6 +21,8 @@ export default function RisingAsh() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+    const parent = canvas.parentElement;
+    if (!parent) return;
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     if (!ctx) return;
 
@@ -33,17 +34,19 @@ export default function RisingAsh() {
     const COUNT = isMobile ? 18 : 40;
 
     function resize() {
-      if (!canvas) return;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      if (!canvas || !parent) return;
+      const rect = parent.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
     }
 
-    window.addEventListener("resize", resize);
+    const ro = new ResizeObserver(resize);
+    ro.observe(parent);
     resize();
 
     function spawn(): Ash {
-      const w = canvas?.width || window.innerWidth;
-      const h = canvas?.height || window.innerHeight;
+      const w = canvas?.width || 800;
+      const h = canvas?.height || 400;
       return {
         x: Math.random() * w,
         y: h + Math.random() * 20,
@@ -56,10 +59,9 @@ export default function RisingAsh() {
       };
     }
 
-    // Seed initial particles spread across the viewport
     for (let i = 0; i < COUNT; i++) {
       const p = spawn();
-      p.y = Math.random() * (canvas.height || window.innerHeight);
+      p.y = Math.random() * (canvas.height || 400);
       p.life = Math.random() * p.maxLife;
       particles.push(p);
     }
@@ -74,7 +76,6 @@ export default function RisingAsh() {
         p.y += p.vy;
         p.life++;
 
-        // Fade in first 20%, fade out last 30%
         const progress = p.life / p.maxLife;
         if (progress < 0.2) {
           p.opacity = progress / 0.2;
@@ -84,19 +85,16 @@ export default function RisingAsh() {
           p.opacity = 1;
         }
 
-        // Recycle dead particles
         if (p.life >= p.maxLife || p.y < -10) {
           particles[i] = spawn();
           continue;
         }
 
-        // Draw ash particle
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(212, 160, 23, ${p.opacity * 0.35})`;
         ctx.fill();
 
-        // Subtle glow
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size * 2.5, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(212, 160, 23, ${p.opacity * 0.08})`;
@@ -110,15 +108,14 @@ export default function RisingAsh() {
 
     return () => {
       cancelAnimationFrame(animId);
-      window.removeEventListener("resize", resize);
+      ro.disconnect();
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      style={{ width: "100%", height: "100%" }}
-      className="pointer-events-none fixed inset-0 z-0"
+      className="pointer-events-none absolute inset-0 z-0"
       aria-hidden="true"
     />
   );

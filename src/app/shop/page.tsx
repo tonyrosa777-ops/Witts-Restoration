@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ShopContent from "@/components/shop/ShopContent";
+import RisingAsh from "@/components/animations/RisingAsh";
 
 
 export const metadata: Metadata = {
@@ -18,13 +19,14 @@ export default function ShopPage() {
     <>
       {/* Page Header */}
       <section
-        className="py-16 md:py-24"
+        className="relative overflow-hidden py-16 md:py-24"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
-        <div className="mx-auto max-w-4xl px-6 text-center">
+        <RisingAsh />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <h1 className="hero-shimmer font-display text-display mb-6">
             Shop
           </h1>

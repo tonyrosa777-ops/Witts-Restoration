@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FadeUp from "@/components/animations/FadeUp";
+import RisingAsh from "@/components/animations/RisingAsh";
 import StaggerContainer, {
   StaggerItem,
 } from "@/components/animations/StaggerContainer";
@@ -44,13 +45,14 @@ export default function BlogIndexClient({ articles, cta }: Props) {
     <>
       {/* ── Page Header ── dark */}
       <section
-        className="py-12 md:py-16"
+        className="relative overflow-hidden py-12 md:py-16"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
-        <div className="mx-auto max-w-4xl px-6 text-center">
+        <RisingAsh />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
             <h1 className="hero-shimmer font-display text-display mb-4">
               Blog
