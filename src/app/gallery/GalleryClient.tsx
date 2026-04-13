@@ -154,42 +154,33 @@ export default function GalleryClient() {
     <>
       {/* ── Page Header ── */}
       <section
-        className="pt-32 pb-16 md:pt-40 md:pb-20"
+        className="py-16 md:py-24"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
+        <div className="mx-auto max-w-7xl px-6">
+          <FadeUp>
+            <h1 className="hero-shimmer font-display text-display text-center">
+              Gallery
+            </h1>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* ── Subtitle + Category Filter ── */}
+      <section className="py-8" style={{ background: "var(--bg-elevated)" }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <FadeUp>
             <p
-              className="mb-3 text-xs font-medium uppercase tracking-[0.1em]"
-              style={{
-                fontFamily: "var(--font-mono)",
-                color: "var(--accent)",
-              }}
-            >
-              Our Work
-            </p>
-            <h1
-              className="hero-shimmer font-display text-display mb-8"
-            >
-              Gallery
-            </h1>
-            <p
-              className="mx-auto mt-4 max-w-2xl text-lg"
+              className="mx-auto max-w-2xl text-lg mb-8"
               style={{ color: "var(--text-secondary)" }}
             >
               Real jobs. Real results. Every photo is from work done by{" "}
               {siteConfig.name} — no stock images, no borrowed portfolios.
             </p>
           </FadeUp>
-        </div>
-      </section>
-
-      {/* ── Category Filter ── */}
-      <section className="pb-8">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <FadeUp delay={0.05}>
             <div className="flex flex-wrap justify-center gap-2">
               {CATEGORIES.map((cat) => (

@@ -28,30 +28,27 @@ export default function BlogIndexClient({ articles, cta }: Props) {
     <>
       {/* ── Page Header ── */}
       <section
-        className="pt-32 pb-16 md:pt-40 md:pb-20"
+        className="py-16 md:py-24"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
+        <div className="mx-auto max-w-7xl px-6">
           <FadeUp>
-            <p
-              className="mb-4 text-xs font-medium uppercase tracking-[0.15em]"
-              style={{
-                fontFamily: "var(--font-mono)",
-                color: "var(--accent)",
-              }}
-            >
-              Guides &amp; Articles
-            </p>
-            <h1
-              className="hero-shimmer font-display text-display mb-6"
-            >
+            <h1 className="hero-shimmer font-display text-display text-center">
               Blog
             </h1>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* ── Featured Post (horizontal card) ── */}
+      <section className="py-8 md:py-12" style={{ background: "var(--bg-elevated)" }}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <FadeUp>
             <p
-              className="mx-auto max-w-2xl text-lg md:text-xl leading-relaxed"
+              className="mx-auto max-w-2xl text-lg md:text-xl leading-relaxed text-center mb-10"
               style={{ color: "var(--text-secondary)" }}
             >
               Local knowledge for North Country drivers. Honest answers about
@@ -60,10 +57,6 @@ export default function BlogIndexClient({ articles, cta }: Props) {
             </p>
           </FadeUp>
         </div>
-      </section>
-
-      {/* ── Featured Post (horizontal card) ── */}
-      <section className="py-8 md:py-12">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <FadeUp>
             <Link

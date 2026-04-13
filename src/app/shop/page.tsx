@@ -14,36 +14,35 @@ export const metadata: Metadata = {
 
 export default function ShopPage() {
   return (
-    <section
-      className="min-h-screen pt-20"
-      style={{ background: "var(--bg-base)" }}
-    >
-      {/* Page header */}
-      <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8">
-        <p
-          className="mb-2 font-[family-name:var(--font-jetbrains-mono)] text-xs uppercase tracking-[0.15em]"
-          style={{ color: "var(--accent)" }}
-        >
-          Official Merch
-        </p>
-        <h1
-          className="hero-shimmer font-display text-display"
-          style={{
-            color: "var(--text-primary)",
-          }}
-        >
-          Witt&apos;s Restoration Shop
-        </h1>
-        <p
-          className="mt-3 max-w-2xl text-lg"
-          style={{ color: "var(--text-secondary)" }}
-        >
-          Rep the shop that answers at 2 AM. Branded gear built as tough as the
-          trucks we pull.
-        </p>
-      </div>
+    <>
+      {/* Page Header */}
+      <section
+        className="py-16 md:py-24"
+        style={{
+          background:
+            "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
+        }}
+      >
+        <div className="mx-auto max-w-7xl px-6">
+          <h1 className="hero-shimmer font-display text-display text-center">
+            Shop
+          </h1>
+        </div>
+      </section>
 
-      <ShopContent />
-    </section>
+      {/* Content */}
+      <section style={{ background: "var(--bg-elevated)" }}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+          <p
+            className="max-w-2xl text-lg mb-8"
+            style={{ color: "var(--text-secondary)" }}
+          >
+            Rep the shop that answers at 2 AM. Branded gear built as tough as
+            the trucks we pull.
+          </p>
+        </div>
+        <ShopContent />
+      </section>
+    </>
   );
 }
