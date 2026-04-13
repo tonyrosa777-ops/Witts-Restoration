@@ -150,7 +150,7 @@ export default function CityPageClient({
             className="hero-shimmer font-display text-display mb-4"
             style={{
               color: "var(--text-primary)",
-            }
+            }}
           >
             Towing &amp; Auto Services in {area.town}, {area.state}
           </motion.h1>

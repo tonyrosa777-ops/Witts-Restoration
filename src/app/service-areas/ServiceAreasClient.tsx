@@ -52,7 +52,7 @@ export default function ServiceAreasClient({
             className="hero-shimmer font-display text-display mb-6"
             style={{
               color: "var(--text-primary)",
-            }
+            }}
           >
             Towing &amp; Auto Services Across the North Country
           </motion.h1>
