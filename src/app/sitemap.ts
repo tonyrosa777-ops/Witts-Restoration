@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/services`, lastModified: new Date(), priority: 0.9 },
     { url: `${baseUrl}/contact`, lastModified: new Date(), priority: 0.8 },
     { url: `${baseUrl}/booking`, lastModified: new Date(), priority: 0.8 },
+    { url: `${baseUrl}/gallery`, lastModified: new Date(), priority: 0.7 },
     { url: `${baseUrl}/testimonials`, lastModified: new Date(), priority: 0.7 },
     { url: `${baseUrl}/faq`, lastModified: new Date(), priority: 0.7 },
     { url: `${baseUrl}/quiz`, lastModified: new Date(), priority: 0.7 },

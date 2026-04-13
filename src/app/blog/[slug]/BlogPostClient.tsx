@@ -80,8 +80,8 @@ export default function BlogPostClient({
 
       {/* ── Header Image ── */}
       {article.image && (
-        <section className="pb-4 md:pb-8">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <section className="pb-8 md:pb-12">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <FadeUp delay={0.05}>
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
                 <Image
@@ -89,7 +89,7 @@ export default function BlogPostClient({
                   alt={article.title}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 896px"
+                  sizes="(max-width: 768px) 100vw, 1024px"
                   priority
                 />
               </div>
