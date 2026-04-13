@@ -34,21 +34,15 @@ export default function BlogIndexClient({ articles, cta }: Props) {
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
-            <h1 className="hero-shimmer font-display text-display text-center">
+            <h1 className="hero-shimmer font-display text-display mb-6">
               Blog
             </h1>
           </FadeUp>
-        </div>
-      </section>
-
-      {/* ── Featured Post (horizontal card) ── */}
-      <section className="py-8 md:py-12" style={{ background: "var(--bg-elevated)" }}>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <FadeUp>
+          <FadeUp delay={0.15}>
             <p
-              className="mx-auto max-w-2xl text-lg md:text-xl leading-relaxed text-center mb-10"
+              className="mx-auto max-w-2xl text-lg md:text-xl leading-relaxed"
               style={{ color: "var(--text-secondary)" }}
             >
               Local knowledge for North Country drivers. Honest answers about
@@ -57,6 +51,10 @@ export default function BlogIndexClient({ articles, cta }: Props) {
             </p>
           </FadeUp>
         </div>
+      </section>
+
+      {/* ── Featured Post (horizontal card) ── */}
+      <section className="py-8 md:py-12" style={{ background: "var(--bg-elevated)" }}>
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <FadeUp>
             <Link
