@@ -27,10 +27,9 @@ export default function ShopPage() {
           Official Merch
         </p>
         <h1
-          className="font-[family-name:var(--font-barlow-condensed)] font-extrabold leading-none"
+          className="hero-shimmer font-display text-display"
           style={{
             color: "var(--text-primary)",
-            fontSize: "clamp(2rem, 5vw, 3rem)",
           }}
         >
           Witt&apos;s Restoration Shop

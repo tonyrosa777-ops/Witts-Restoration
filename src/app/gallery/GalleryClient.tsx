@@ -175,8 +175,7 @@ export default function GalleryClient() {
               Our Work
             </p>
             <h1
-              className="hero-shimmer text-h1"
-              style={{ fontFamily: "var(--font-display)" }}
+              className="hero-shimmer font-display text-display mb-8"
             >
               Gallery
             </h1>

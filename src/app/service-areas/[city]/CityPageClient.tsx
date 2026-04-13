@@ -147,12 +147,10 @@ export default function CityPageClient({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display font-extrabold uppercase leading-none mb-4"
+            className="hero-shimmer font-display text-display mb-4"
             style={{
-              fontSize: "clamp(2.5rem, 8vw, 4.5rem)",
-              letterSpacing: "-0.02em",
               color: "var(--text-primary)",
-            }}
+            }
           >
             Towing &amp; Auto Services in {area.town}, {area.state}
           </motion.h1>

@@ -49,8 +49,7 @@ export default function BlogIndexClient({ articles, cta }: Props) {
               Guides &amp; Articles
             </p>
             <h1
-              className="hero-shimmer text-display mb-6"
-              style={{ fontFamily: "var(--font-display)" }}
+              className="hero-shimmer font-display text-display mb-6"
             >
               Blog
             </h1>

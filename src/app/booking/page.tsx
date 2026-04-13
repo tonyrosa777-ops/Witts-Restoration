@@ -25,9 +25,8 @@ export default function BookingPage() {
             Book an Appointment
           </span>
           <h1
-            className="text-h2 mb-3"
+            className="hero-shimmer font-display text-display mb-3"
             style={{
-              fontFamily: "var(--font-display)",
               color: "var(--text-primary)",
             }}
           >

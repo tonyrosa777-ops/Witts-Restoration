@@ -151,9 +151,8 @@ export default function QuizClient() {
               className="text-center py-16"
             >
               <h1
-                className="text-h2 mb-4"
+                className="hero-shimmer font-display text-display mb-4"
                 style={{
-                  fontFamily: "var(--font-display)",
                   color: "var(--text-primary)",
                 }}
               >

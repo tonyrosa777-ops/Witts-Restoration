@@ -60,8 +60,7 @@ export default function BlogPostClient({
               {article.category}
             </p>
             <h1
-              className="hero-shimmer text-h1 mb-4"
-              style={{ fontFamily: "var(--font-display)" }}
+              className="hero-shimmer font-display text-display mb-4"
             >
               {article.title}
             </h1>

@@ -49,12 +49,10 @@ export default function ServiceAreasClient({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display font-extrabold uppercase leading-none mb-6"
+            className="hero-shimmer font-display text-display mb-6"
             style={{
-              fontSize: "clamp(2.5rem, 8vw, 4.5rem)",
-              letterSpacing: "-0.02em",
               color: "var(--text-primary)",
-            }}
+            }
           >
             Towing &amp; Auto Services Across the North Country
           </motion.h1>
