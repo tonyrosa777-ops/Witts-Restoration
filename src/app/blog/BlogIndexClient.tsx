@@ -121,7 +121,7 @@ export default function BlogIndexClient({ articles, cta }: Props) {
       </section>
 
       {/* ── Article Grid (3 columns) ── */}
-      <section className="py-8 md:py-12 pb-16 md:pb-24">
+      <section className="py-8 md:py-12 pb-16 md:pb-24" style={{ background: "var(--bg-elevated)" }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {rest.map((article) => (
