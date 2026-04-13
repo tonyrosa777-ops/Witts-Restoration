@@ -1,7 +1,7 @@
 "use client";
-// Rising Gold Ash — lightweight ambient particle canvas for page headers
-// ~25 particles drift upward and fade, gold-tinted on dark backgrounds
-// Mobile: 50% particle reduction, respects prefers-reduced-motion
+// Rising Gold Ash — full-viewport ambient particle canvas
+// ~40 particles drift upward and fade, gold-tinted on dark backgrounds
+// Mobile: reduced count, respects prefers-reduced-motion
 
 import { useEffect, useRef } from "react";
 
@@ -34,18 +34,19 @@ export default function RisingAsh() {
 
     function resize() {
       if (!canvas) return;
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     }
 
-    const ro = new ResizeObserver(resize);
-    ro.observe(canvas);
+    window.addEventListener("resize", resize);
     resize();
 
     function spawn(): Ash {
+      const w = canvas?.width || window.innerWidth;
+      const h = canvas?.height || window.innerHeight;
       return {
-        x: Math.random() * (canvas?.width || 800),
-        y: (canvas?.height || 400) + Math.random() * 20,
+        x: Math.random() * w,
+        y: h + Math.random() * 20,
         vx: (Math.random() - 0.5) * 0.3,
         vy: -(0.3 + Math.random() * 0.5),
         size: 1.5 + Math.random() * 2,
@@ -55,10 +56,10 @@ export default function RisingAsh() {
       };
     }
 
-    // Seed initial particles
+    // Seed initial particles spread across the viewport
     for (let i = 0; i < COUNT; i++) {
       const p = spawn();
-      p.y = Math.random() * (canvas.height || 400);
+      p.y = Math.random() * (canvas.height || window.innerHeight);
       p.life = Math.random() * p.maxLife;
       particles.push(p);
     }
@@ -109,14 +110,15 @@ export default function RisingAsh() {
 
     return () => {
       cancelAnimationFrame(animId);
-      ro.disconnect();
+      window.removeEventListener("resize", resize);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none absolute inset-0 z-0"
+      style={{ width: "100%", height: "100%" }}
+      className="pointer-events-none fixed inset-0 z-0"
       aria-hidden="true"
     />
   );
