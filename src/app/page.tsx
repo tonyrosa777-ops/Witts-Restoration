@@ -13,8 +13,9 @@
 //  6. Testimonials      — light (bg-elevated)
 //  7. QuizCTA           — dark  (bg-base + radial gradient)
 //  8. BlogPreview       — light (bg-elevated)
-//  9. BookingPreview    — dark  (bg-base + radial gradient)
-// 10. FinalCTA          — dark  (bg-base + radial gradient) — merged with booking visually
+//  9. ShopTeaser        — dark  (bg-base + radial gradient)
+// 10. BookingPreview    — light (bg-elevated)
+// 11. FinalCTA          — dark  (bg-base + radial gradient)
 // ═══════════════════════════════════════════════
 
 import Hero from "@/components/sections/Hero";
@@ -25,6 +26,7 @@ import StatsRow from "@/components/sections/StatsRow";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import QuizCTA from "@/components/sections/QuizCTA";
 import BlogPreview from "@/components/sections/BlogPreview";
+import ShopTeaser from "@/components/sections/ShopTeaser";
 import BookingPreview from "@/components/sections/BookingPreview";
 import FinalCTA from "@/components/sections/FinalCTA";
 
@@ -55,10 +57,13 @@ export default function HomePage() {
       {/* 8. Blog preview — light (bg-elevated) */}
       <BlogPreview />
 
-      {/* 9. Booking preview — dark (bg-base + radial gradient) */}
+      {/* 9. Shop teaser — dark (bg-base + radial gradient) */}
+      <ShopTeaser />
+
+      {/* 10. Booking preview — light (bg-elevated) */}
       <BookingPreview />
 
-      {/* 10. Final CTA — dark (bg-base + radial gradient) */}
+      {/* 11. Final CTA — dark (bg-base + radial gradient) */}
       <FinalCTA />
     </>
   );

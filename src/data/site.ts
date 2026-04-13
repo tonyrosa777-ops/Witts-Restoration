@@ -54,6 +54,7 @@ export const navigation = {
     { label: "Gallery", href: "/gallery" },
     { label: "Testimonials", href: "/testimonials" },
     { label: "Blog", href: "/blog" },
+    { label: "Shop", href: "/shop" },
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
     { label: "⬥ Pricing", href: "/pricing" },

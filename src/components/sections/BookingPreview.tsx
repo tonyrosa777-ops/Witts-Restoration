@@ -10,8 +10,7 @@ export default function BookingPreview() {
     <section
       className="py-16 md:py-24"
       style={{
-        background:
-          "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.06), transparent 70%), var(--bg-base)",
+        background: "var(--bg-elevated)",
       }}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
