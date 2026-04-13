@@ -1,0 +1,146 @@
+[
+  {
+    "id": "witt-tee-black",
+    "name": "Witt's Restoration Classic Tee — Black",
+    "description": "Heavyweight cotton tee with the Witt's Restoration gold logo on the chest. Built tough, just like the shop.",
+    "price": 24.99,
+    "category": "Apparel",
+    "imageUrl": "/images/shop/placeholder.png",
+    "variants": [
+      { "id": "witt-tee-black-s", "size": "S", "color": "Black", "inStock": true },
+      { "id": "witt-tee-black-m", "size": "M", "color": "Black", "inStock": true },
+      { "id": "witt-tee-black-l", "size": "L", "color": "Black", "inStock": true },
+      { "id": "witt-tee-black-xl", "size": "XL", "color": "Black", "inStock": true },
+      { "id": "witt-tee-black-2xl", "size": "2XL", "color": "Black", "inStock": true }
+    ]
+  },
+  {
+    "id": "witt-tee-charcoal",
+    "name": "Witt's Restoration Classic Tee — Charcoal",
+    "description": "Same rugged fit in dark charcoal. Gold logo pops on the heather finish.",
+    "price": 24.99,
+    "category": "Apparel",
+    "imageUrl": "/images/shop/placeholder.png",
+    "variants": [
+      { "id": "witt-tee-charcoal-s", "size": "S", "color": "Charcoal", "inStock": true },
+      { "id": "witt-tee-charcoal-m", "size": "M", "color": "Charcoal", "inStock": true },
+      { "id": "witt-tee-charcoal-l", "size": "L", "color": "Charcoal", "inStock": true },
+      { "id": "witt-tee-charcoal-xl", "size": "XL", "color": "Charcoal", "inStock": true },
+      { "id": "witt-tee-charcoal-2xl", "size": "2XL", "color": "Charcoal", "inStock": true }
+    ]
+  },
+  {
+    "id": "witt-tee-gold",
+    "name": "Witt's Restoration Classic Tee — Gold",
+    "description": "Stand out in gold. Black Witt's Restoration logo on the front, built for the shop or the trail.",
+    "price": 24.99,
+    "category": "Apparel",
+    "imageUrl": "/images/shop/placeholder.png",
+    "variants": [
+      { "id": "witt-tee-gold-s", "size": "S", "color": "Gold", "inStock": true },
+      { "id": "witt-tee-gold-m", "size": "M", "color": "Gold", "inStock": true },
+      { "id": "witt-tee-gold-l", "size": "L", "color": "Gold", "inStock": true },
+      { "id": "witt-tee-gold-xl", "size": "XL", "color": "Gold", "inStock": true },
+      { "id": "witt-tee-gold-2xl", "size": "2XL", "color": "Gold", "inStock": true }
+    ]
+  },
+  {
+    "id": "witt-hoodie-black",
+    "name": "Witt's Restoration Pullover Hoodie — Black",
+    "description": "Fleece-lined pullover hoodie with gold Witt's Restoration logo. Perfect for those sub-zero shop nights.",
+    "price": 44.99,
+    "category": "Apparel",
+    "imageUrl": "/images/shop/placeholder.png",
+    "variants": [
+      { "id": "witt-hoodie-black-s", "size": "S", "color": "Black", "inStock": true },
+      { "id": "witt-hoodie-black-m", "size": "M", "color": "Black", "inStock": true },
+      { "id": "witt-hoodie-black-l", "size": "L", "color": "Black", "inStock": true },
+      { "id": "witt-hoodie-black-xl", "size": "XL", "color": "Black", "inStock": true },
+      { "id": "witt-hoodie-black-2xl", "size": "2XL", "color": "Black", "inStock": true }
+    ]
+  },
+  {
+    "id": "witt-hoodie-charcoal",
+    "name": "Witt's Restoration Pullover Hoodie — Charcoal",
+    "description": "Dark charcoal fleece hoodie. Gold logo on the chest, Witt's Restoration on the back.",
+    "price": 44.99,
+    "category": "Apparel",
+    "imageUrl": "/images/shop/placeholder.png",
+    "variants": [
+      { "id": "witt-hoodie-charcoal-s", "size": "S", "color": "Charcoal", "inStock": true },
+      { "id": "witt-hoodie-charcoal-m", "size": "M", "color": "Charcoal", "inStock": true },
+      { "id": "witt-hoodie-charcoal-l", "size": "L", "color": "Charcoal", "inStock": true },
+      { "id": "witt-hoodie-charcoal-xl", "size": "XL", "color": "Charcoal", "inStock": true },
+      { "id": "witt-hoodie-charcoal-2xl", "size": "2XL", "color": "Charcoal", "inStock": true }
+    ]
+  },
+  {
+    "id": "witt-hat-snapback",
+    "name": "Witt's Restoration Snapback Cap",
+    "description": "Structured snapback with embroidered gold Witt's Restoration logo. One size fits most.",
+    "price": 22.99,
+    "category": "Accessories",
+    "imageUrl": "/images/shop/placeholder.png",
+    "variants": [
+      { "id": "witt-hat-snapback-black", "size": "One Size", "color": "Black", "inStock": true },
+      { "id": "witt-hat-snapback-charcoal", "size": "One Size", "color": "Charcoal", "inStock": true }
+    ]
+  },
+  {
+    "id": "witt-hat-trucker",
+    "name": "Witt's Restoration Trucker Hat",
+    "description": "Mesh-back trucker hat with embroidered logo. Breathable for long days under the hood.",
+    "price": 22.99,
+    "category": "Accessories",
+    "imageUrl": "/images/shop/placeholder.png",
+    "variants": [
+      { "id": "witt-hat-trucker-black", "size": "One Size", "color": "Black/Gold", "inStock": true },
+      { "id": "witt-hat-trucker-camo", "size": "One Size", "color": "Camo/Black", "inStock": true }
+    ]
+  },
+  {
+    "id": "witt-sticker-logo",
+    "name": "Witt's Restoration Logo Sticker",
+    "description": "4-inch die-cut vinyl sticker. Weather-resistant, slap it on your toolbox or bumper.",
+    "price": 4.99,
+    "category": "Accessories",
+    "imageUrl": "/images/shop/placeholder.png",
+    "variants": [
+      { "id": "witt-sticker-logo-gold", "size": "4 inch", "color": "Gold on Black", "inStock": true }
+    ]
+  },
+  {
+    "id": "witt-sticker-tow",
+    "name": "Witt's Restoration Tow Truck Sticker",
+    "description": "5-inch die-cut vinyl sticker featuring the Witt's tow truck silhouette. UV and water resistant.",
+    "price": 4.99,
+    "category": "Accessories",
+    "imageUrl": "/images/shop/placeholder.png",
+    "variants": [
+      { "id": "witt-sticker-tow-gold", "size": "5 inch", "color": "Gold on Black", "inStock": true }
+    ]
+  },
+  {
+    "id": "witt-mug",
+    "name": "Witt's Restoration Coffee Mug",
+    "description": "11oz ceramic mug with gold Witt's Restoration logo. For the shop, the trail, or 3 AM tow calls.",
+    "price": 16.99,
+    "category": "Accessories",
+    "imageUrl": "/images/shop/placeholder.png",
+    "variants": [
+      { "id": "witt-mug-black", "size": "11oz", "color": "Black", "inStock": true },
+      { "id": "witt-mug-white", "size": "11oz", "color": "White", "inStock": true }
+    ]
+  },
+  {
+    "id": "witt-koozie",
+    "name": "Witt's Restoration Can Koozie",
+    "description": "Neoprene can koozie with gold logo. Keeps your drink cold while you wrench.",
+    "price": 7.99,
+    "category": "Accessories",
+    "imageUrl": "/images/shop/placeholder.png",
+    "variants": [
+      { "id": "witt-koozie-black", "size": "Standard", "color": "Black", "inStock": true }
+    ]
+  }
+]
