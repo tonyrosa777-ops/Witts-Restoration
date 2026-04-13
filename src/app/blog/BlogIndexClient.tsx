@@ -44,7 +44,7 @@ export default function BlogIndexClient({ articles, cta }: Props) {
     <>
       {/* ── Page Header ── dark */}
       <section
-        className="py-16 md:py-24"
+        className="py-12 md:py-16"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
@@ -52,7 +52,7 @@ export default function BlogIndexClient({ articles, cta }: Props) {
       >
         <div className="mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
-            <h1 className="hero-shimmer font-display text-display mb-6">
+            <h1 className="hero-shimmer font-display text-display mb-4">
               Blog
             </h1>
           </FadeUp>
@@ -104,7 +104,7 @@ export default function BlogIndexClient({ articles, cta }: Props) {
       </section>
 
       {/* ── Featured Post ── dark (bg-base) */}
-      <section className="py-8 md:py-12">
+      <section className="py-6 md:py-8">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <FadeUp>
             <Link
@@ -130,7 +130,7 @@ export default function BlogIndexClient({ articles, cta }: Props) {
                     />
                   </div>
                 )}
-                <div className="flex flex-col justify-center p-8 md:p-10">
+                <div className="flex flex-col justify-center p-6 md:p-8">
                   <p
                     className="mb-3 text-xs font-medium uppercase tracking-[0.1em]"
                     style={{
@@ -169,7 +169,7 @@ export default function BlogIndexClient({ articles, cta }: Props) {
       </section>
 
       {/* ── Article Grid ── dark (bg-base) */}
-      <section className="py-8 md:py-12 pb-16 md:pb-24">
+      <section className="py-6 pb-16 md:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <StaggerContainer
             key={activeCategory}
