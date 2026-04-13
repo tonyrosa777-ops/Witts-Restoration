@@ -25,16 +25,13 @@ export default function BlogIndexClient({ articles, cta }: Props) {
   const rest = articles.slice(1);
 
   return (
-    <main
-      className="min-h-screen pt-20"
-      style={{ background: "var(--bg-base)" }}
-    >
+    <>
       {/* ── Page Header ── */}
       <section
-        className="py-20 md:py-32"
+        className="pt-32 pb-16 md:pt-40 md:pb-20"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%), var(--bg-base)",
+            "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
@@ -204,6 +201,6 @@ export default function BlogIndexClient({ articles, cta }: Props) {
           </StaggerContainer>
         </div>
       </section>
-    </main>
+    </>
   );
 }
