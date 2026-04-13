@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { services } from "@/data/site";
+import { services, serviceAreas } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://wittsrestoration.com";
@@ -24,5 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...servicePages];
+  const serviceAreaPages: MetadataRoute.Sitemap = serviceAreas.map((a) => ({
+    url: `${baseUrl}/service-areas/${a.slug}`,
+    lastModified: new Date(),
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...servicePages, ...serviceAreaPages];
 }

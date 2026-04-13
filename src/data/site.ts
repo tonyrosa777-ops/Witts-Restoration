@@ -1118,6 +1118,8 @@ export const serviceAreas = [
     town: "Groveton",
     state: "NH",
     slug: "groveton-nh",
+    population: "1,100",
+    distance: "0 miles — home base",
     description:
       "Home base. 11 West St, Groveton. The fastest response time in the area because this is where the shop is.",
   },
@@ -1125,6 +1127,8 @@ export const serviceAreas = [
     town: "Lancaster",
     state: "NH",
     slug: "lancaster-nh",
+    population: "3,500",
+    distance: "10 miles",
     description:
       "Serving Lancaster and the Route 2 corridor. Towing, mobile mechanic, and body work for the county seat.",
   },
@@ -1132,6 +1136,8 @@ export const serviceAreas = [
     town: "Stark",
     state: "NH",
     slug: "stark-nh",
+    population: "600",
+    distance: "12 miles",
     description:
       "Covering Stark and the Route 110 stretch. Remote roads, quick response. I know every turn.",
   },
@@ -1139,6 +1145,8 @@ export const serviceAreas = [
     town: "Northumberland",
     state: "NH",
     slug: "northumberland-nh",
+    population: "2,300",
+    distance: "2 miles",
     description:
       "Right next door to Groveton. Towing, mechanical work, and body repair for Northumberland residents.",
   },
@@ -1146,6 +1154,8 @@ export const serviceAreas = [
     town: "Stratford",
     state: "NH",
     slug: "stratford-nh",
+    population: "750",
+    distance: "15 miles",
     description:
       "Serving Stratford and the upper Connecticut River valley. Logging roads, remote terrain, no problem.",
   },
@@ -1153,6 +1163,8 @@ export const serviceAreas = [
     town: "Colebrook",
     state: "NH",
     slug: "colebrook-nh",
+    population: "2,300",
+    distance: "35 miles",
     description:
       "Covering Colebrook and the northern tip of Coos County. Long-distance tows and recovery service.",
   },
@@ -1160,6 +1172,8 @@ export const serviceAreas = [
     town: "Guildhall",
     state: "VT",
     slug: "guildhall-vt",
+    population: "260",
+    distance: "5 miles",
     description:
       "Just across the Connecticut River into Vermont. Same fast response, same quality work.",
   },
@@ -1167,6 +1181,8 @@ export const serviceAreas = [
     town: "Lunenburg",
     state: "VT",
     slug: "lunenburg-vt",
+    population: "1,400",
+    distance: "12 miles",
     description:
       "Serving Lunenburg and the Vermont side of the border. FMCSA licensed for interstate service.",
   },
