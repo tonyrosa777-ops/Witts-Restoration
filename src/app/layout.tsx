@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import StickyCallBar from "@/components/layout/StickyCallBar";
 import { CartProvider } from "@/lib/cart";
 import CartDrawer from "@/components/CartDrawer";
+import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 
 const barlowCondensed = Barlow_Condensed({
@@ -53,6 +54,9 @@ export default function RootLayout({
       lang="en"
       className={`${barlowCondensed.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
+      <head>
+        <JsonLd />
+      </head>
       <body className="min-h-full flex flex-col pb-16 md:pb-0">
         <CartProvider>
           <Header />
