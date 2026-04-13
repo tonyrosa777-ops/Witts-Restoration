@@ -6,6 +6,7 @@ import FadeUp from "@/components/animations/FadeUp";
 import StaggerContainer, {
   StaggerItem,
 } from "@/components/animations/StaggerContainer";
+import RisingAsh from "@/components/animations/RisingAsh";
 import { siteConfig } from "@/data/site";
 
 // ── Gallery data (seeded — replace with real photos post-launch) ──
@@ -154,33 +155,34 @@ export default function GalleryClient() {
     <>
       {/* ── Page Header ── */}
       <section
-        className="py-16 md:py-24"
+        className="relative overflow-hidden py-16 md:py-24"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
-        <div className="mx-auto max-w-7xl px-6">
+        <RisingAsh />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
-            <h1 className="hero-shimmer font-display text-display text-center">
+            <h1 className="hero-shimmer font-display text-display mb-6">
               Gallery
             </h1>
           </FadeUp>
-        </div>
-      </section>
-
-      {/* ── Subtitle + Category Filter ── */}
-      <section className="py-8" style={{ background: "var(--bg-elevated)" }}>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <FadeUp>
+          <FadeUp delay={0.15}>
             <p
-              className="mx-auto max-w-2xl text-lg mb-8"
+              className="mx-auto max-w-2xl text-lg"
               style={{ color: "var(--text-secondary)" }}
             >
               Real jobs. Real results. Every photo is from work done by{" "}
               {siteConfig.name} — no stock images, no borrowed portfolios.
             </p>
           </FadeUp>
+        </div>
+      </section>
+
+      {/* ── Category Filter ── */}
+      <section className="py-8" style={{ background: "var(--bg-elevated)" }}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <FadeUp delay={0.05}>
             <div className="flex flex-wrap justify-center gap-2">
               {CATEGORIES.map((cat) => (

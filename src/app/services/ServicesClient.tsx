@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import FadeUp from "@/components/animations/FadeUp";
+import RisingAsh from "@/components/animations/RisingAsh";
 import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
 
 interface Service {
@@ -16,13 +17,14 @@ export default function ServicesClient({ services }: { services: Service[] }) {
     <>
       {/* Page Header */}
       <section
-        className="py-16 md:py-24"
+        className="relative overflow-hidden py-16 md:py-24"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
-        <div className="mx-auto max-w-7xl px-6">
+        <RisingAsh />
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
           <FadeUp>
             <h1 className="hero-shimmer font-display text-display text-center">
               Our Services

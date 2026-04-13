@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import FadeUp from "@/components/animations/FadeUp";
+import RisingAsh from "@/components/animations/RisingAsh";
 import StaggerContainer, {
   StaggerItem,
 } from "@/components/animations/StaggerContainer";
@@ -28,13 +29,14 @@ export default function BlogIndexClient({ articles, cta }: Props) {
     <>
       {/* ── Page Header ── */}
       <section
-        className="py-16 md:py-24"
+        className="relative overflow-hidden py-16 md:py-24"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
-        <div className="mx-auto max-w-4xl px-6 text-center">
+        <RisingAsh />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
             <h1 className="hero-shimmer font-display text-display mb-6">
               Blog
