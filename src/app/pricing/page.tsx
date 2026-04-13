@@ -38,18 +38,18 @@ const COMPARISON: ComparisonCategory[] = [
   {
     name: "Conversion",
     rows: [
-      { feature: "Interactive quiz lead capture", starter: false, pro: true, premium: true },
-      { feature: "Inline booking calendar", starter: false, pro: true, premium: true },
+      { feature: "Lead-capture quiz", starter: false, pro: true, premium: true },
+      { feature: "Automated booking calendar", starter: false, pro: true, premium: true },
       { feature: "Sticky mobile click-to-call bar", starter: false, pro: true, premium: true },
-      { feature: "Testimonials page (36 reviews)", starter: false, pro: true, premium: true },
-      { feature: "Before/after gallery page", starter: false, pro: true, premium: true },
+      { feature: "Testimonials showcase (36 reviews)", starter: false, pro: true, premium: true },
+      { feature: "Photo gallery", starter: false, pro: true, premium: true },
     ],
   },
   {
     name: "Content & SEO",
     rows: [
       { feature: "SEO foundation (meta, sitemap, schema)", starter: true, pro: true, premium: true },
-      { feature: "Blog architecture (Sanity CMS)", starter: false, pro: true, premium: true },
+      { feature: "Professional blog (Sanity CMS)", starter: false, pro: true, premium: true },
       { feature: "9-10 SEO-optimized articles", starter: false, pro: true, premium: true },
       { feature: "Service area pages (8+ towns)", starter: false, pro: true, premium: true },
       { feature: "AEO optimization for AI search", starter: false, pro: true, premium: true },
@@ -58,7 +58,7 @@ const COMPARISON: ComparisonCategory[] = [
   {
     name: "Commerce",
     rows: [
-      { feature: "Branded merchandise shop", starter: false, pro: false, premium: true },
+      { feature: "Branded merch shop", starter: false, pro: false, premium: true },
       { feature: "Product pages with variant picker", starter: false, pro: false, premium: true },
       { feature: "Shopping cart and checkout", starter: false, pro: false, premium: true },
       { feature: "Inventory management", starter: false, pro: false, premium: true },
@@ -68,7 +68,7 @@ const COMPARISON: ComparisonCategory[] = [
   {
     name: "Support",
     rows: [
-      { feature: "Google-ready in 60-90 days", starter: true, pro: true, premium: true },
+      { feature: "Search-ready in 60-90 days", starter: true, pro: true, premium: true },
       { feature: "Source code ownership", starter: true, pro: true, premium: true },
       { feature: "Deployment to Vercel", starter: true, pro: true, premium: true },
     ],
