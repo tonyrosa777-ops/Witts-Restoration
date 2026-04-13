@@ -4,7 +4,6 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FadeUp from "@/components/animations/FadeUp";
-
 import StaggerContainer, {
   StaggerItem,
 } from "@/components/animations/StaggerContainer";
@@ -22,24 +21,28 @@ interface Props {
   cta: { quiz: string; booking: string };
 }
 
+const CATEGORIES = [
+  "All",
+  "Towing",
+  "Auto Body",
+  "Snowmobile & ATV",
+  "Mobile Mechanic",
+  "Mechanical Repair",
+];
+
 export default function BlogIndexClient({ articles, cta }: Props) {
   const featured = articles[0];
   const rest = articles.slice(1);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
-
-  const categories = useMemo(() => {
-    const cats = new Set(rest.map((a) => a.category));
-    return Array.from(cats).sort();
-  }, [rest]);
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const filtered = useMemo(() => {
-    if (!categoryFilter) return rest;
-    return rest.filter((a) => a.category === categoryFilter);
-  }, [rest, categoryFilter]);
+    if (activeCategory === "All") return rest;
+    return rest.filter((a) => a.category === activeCategory);
+  }, [rest, activeCategory]);
 
   return (
     <>
-      {/* ── Page Header ── */}
+      {/* ── Page Header ── dark */}
       <section
         className="py-16 md:py-24"
         style={{
@@ -55,7 +58,7 @@ export default function BlogIndexClient({ articles, cta }: Props) {
           </FadeUp>
           <FadeUp delay={0.15}>
             <p
-              className="mx-auto max-w-2xl text-lg md:text-xl leading-relaxed"
+              className="mx-auto max-w-2xl text-lg"
               style={{ color: "var(--text-secondary)" }}
             >
               Local knowledge for North Country drivers. Honest answers about
@@ -66,8 +69,42 @@ export default function BlogIndexClient({ articles, cta }: Props) {
         </div>
       </section>
 
-      {/* ── Featured Post (horizontal card) ── */}
-      <section className="py-8 md:py-12" style={{ background: "var(--bg-elevated)" }}>
+      {/* ── Category Filter ── gray (bg-elevated) */}
+      <section className="py-8" style={{ background: "var(--bg-elevated)" }}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
+          <FadeUp delay={0.05}>
+            <div className="flex flex-wrap justify-center gap-2">
+              {CATEGORIES.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className="rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 border"
+                  style={{
+                    background:
+                      activeCategory === cat
+                        ? "rgba(212,160,23,0.12)"
+                        : "var(--bg-card)",
+                    borderColor:
+                      activeCategory === cat
+                        ? "var(--accent)"
+                        : "rgba(245,245,245,0.05)",
+                    color:
+                      activeCategory === cat
+                        ? "var(--accent)"
+                        : "var(--text-secondary)",
+                    fontFamily: "var(--font-body)",
+                  }}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* ── Featured Post ── dark (bg-base) */}
+      <section className="py-8 md:py-12">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <FadeUp>
             <Link
@@ -131,43 +168,11 @@ export default function BlogIndexClient({ articles, cta }: Props) {
         </div>
       </section>
 
-      {/* ── Category Filter + Article Grid ── */}
-      <section className="py-8 md:py-12 pb-16 md:pb-24" style={{ background: "var(--bg-elevated)" }}>
+      {/* ── Article Grid ── dark (bg-base) */}
+      <section className="py-8 md:py-12 pb-16 md:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          {/* Category Filter */}
-          <FadeUp>
-            <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-              <button
-                onClick={() => setCategoryFilter(null)}
-                className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer"
-                style={{
-                  background: categoryFilter === null ? "var(--accent)" : "var(--bg-card)",
-                  color: categoryFilter === null ? "var(--bg-base)" : "var(--text-secondary)",
-                  fontFamily: "var(--font-body)",
-                }}
-              >
-                All
-              </button>
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setCategoryFilter(cat)}
-                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer"
-                  style={{
-                    background: categoryFilter === cat ? "var(--accent)" : "var(--bg-card)",
-                    color: categoryFilter === cat ? "var(--bg-base)" : "var(--text-secondary)",
-                    fontFamily: "var(--font-body)",
-                  }}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          </FadeUp>
-
-          {/* Article Grid */}
           <StaggerContainer
-            key={categoryFilter || "all"}
+            key={activeCategory}
             className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
             {filtered.map((article) => (
