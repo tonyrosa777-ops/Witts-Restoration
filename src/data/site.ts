@@ -71,7 +71,7 @@ export const hero = {
   // H1 = siteConfig.tagline (rendered via component with shimmer class)
   subheadline:
     "Stuck in a ditch at 2 AM? Rust eating your truck alive? From emergency towing to full restorations, Zeek handles it all. One shop, one guy, one call.",
-  ctaPrimary: { label: "Call Now. 24/7.", href: "tel:+18027515786" },
+  ctaPrimary: { label: "Book Your Free Estimate", href: "/booking" },
   ctaSecondary: { label: "What Does Your Vehicle Need?", href: "/quiz" },
   trustMicro: [
     "⚡ 24/7 Emergency Response",
