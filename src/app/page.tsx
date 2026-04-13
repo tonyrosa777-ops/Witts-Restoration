@@ -14,8 +14,7 @@
 //  7. QuizCTA           — dark  (bg-base + radial gradient)
 //  8. BlogPreview       — light (bg-elevated)
 //  9. ShopTeaser        — dark  (bg-base + radial gradient)
-// 10. BookingPreview    — light (bg-elevated)
-// 11. FinalCTA          — dark  (bg-base + radial gradient)
+// 10. FinalCTA          — light (bg-elevated)
 // ═══════════════════════════════════════════════
 
 import Hero from "@/components/sections/Hero";
@@ -27,7 +26,6 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import QuizCTA from "@/components/sections/QuizCTA";
 import BlogPreview from "@/components/sections/BlogPreview";
 import ShopTeaser from "@/components/sections/ShopTeaser";
-import BookingPreview from "@/components/sections/BookingPreview";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export default function HomePage() {
@@ -60,10 +58,7 @@ export default function HomePage() {
       {/* 9. Shop teaser — dark (bg-base + radial gradient) */}
       <ShopTeaser />
 
-      {/* 10. Booking preview — light (bg-elevated) */}
-      <BookingPreview />
-
-      {/* 11. Final CTA — dark (bg-base + radial gradient) */}
+      {/* 10. Final CTA — light (bg-elevated) */}
       <FinalCTA />
     </>
   );
