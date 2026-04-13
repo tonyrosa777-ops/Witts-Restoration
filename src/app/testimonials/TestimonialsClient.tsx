@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import FadeUp from "@/components/animations/FadeUp";
 
@@ -23,23 +23,10 @@ const PER_PAGE = 9;
 
 export default function TestimonialsClient({ testimonials, meta, cta }: Props) {
   const [page, setPage] = useState(0);
-  const [serviceFilter, setServiceFilter] = useState<string | null>(null);
 
-  // Get unique service types
-  const serviceTypes = useMemo(() => {
-    const types = new Set(testimonials.map((t) => t.service));
-    return Array.from(types).sort();
-  }, [testimonials]);
-
-  // Filter and paginate
-  const filtered = useMemo(() => {
-    if (!serviceFilter) return testimonials;
-    return testimonials.filter((t) => t.service === serviceFilter);
-  }, [testimonials, serviceFilter]);
-
-  const totalPages = Math.ceil(filtered.length / PER_PAGE);
+  const totalPages = Math.ceil(testimonials.length / PER_PAGE);
   const currentPage = Math.min(page, totalPages - 1);
-  const pageItems = filtered.slice(currentPage * PER_PAGE, (currentPage + 1) * PER_PAGE);
+  const pageItems = testimonials.slice(currentPage * PER_PAGE, (currentPage + 1) * PER_PAGE);
 
   // Featured testimonial (first featured one)
   const featured = testimonials.find((t) => t.featured);
@@ -101,44 +88,9 @@ export default function TestimonialsClient({ testimonials, meta, cta }: Props) {
       {/* Filter + Grid */}
       <section className="py-16 md:py-24" style={{ background: "var(--bg-elevated)" }}>
         <div className="mx-auto max-w-7xl px-6">
-          {/* Service Filter */}
-          <FadeUp>
-            <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-              <button
-                onClick={() => {
-                  setServiceFilter(null);
-                  setPage(0);
-                }}
-                className="px-4 py-2 rounded-lg font-body text-sm font-medium transition-all duration-200 cursor-pointer"
-                style={{
-                  background: serviceFilter === null ? "var(--accent)" : "var(--bg-card)",
-                  color: serviceFilter === null ? "var(--bg-base)" : "var(--text-secondary)",
-                }}
-              >
-                All
-              </button>
-              {serviceTypes.map((type) => (
-                <button
-                  key={type}
-                  onClick={() => {
-                    setServiceFilter(type);
-                    setPage(0);
-                  }}
-                  className="px-4 py-2 rounded-lg font-body text-sm font-medium transition-all duration-200 cursor-pointer"
-                  style={{
-                    background: serviceFilter === type ? "var(--accent)" : "var(--bg-card)",
-                    color: serviceFilter === type ? "var(--bg-base)" : "var(--text-secondary)",
-                  }}
-                >
-                  {type}
-                </button>
-              ))}
-            </div>
-          </FadeUp>
-
           {/* Testimonial Grid: 3 cols x 3 rows = 9 per page */}
           <StaggerContainer
-            key={`${currentPage}-${serviceFilter}`}
+            key={currentPage}
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {pageItems.map((testimonial, i) => (

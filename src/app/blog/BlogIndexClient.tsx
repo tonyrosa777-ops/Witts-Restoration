@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FadeUp from "@/components/animations/FadeUp";
@@ -24,6 +25,17 @@ interface Props {
 export default function BlogIndexClient({ articles, cta }: Props) {
   const featured = articles[0];
   const rest = articles.slice(1);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+
+  const categories = useMemo(() => {
+    const cats = new Set(rest.map((a) => a.category));
+    return Array.from(cats).sort();
+  }, [rest]);
+
+  const filtered = useMemo(() => {
+    if (!categoryFilter) return rest;
+    return rest.filter((a) => a.category === categoryFilter);
+  }, [rest, categoryFilter]);
 
   return (
     <>
@@ -119,11 +131,46 @@ export default function BlogIndexClient({ articles, cta }: Props) {
         </div>
       </section>
 
-      {/* ── Article Grid (3 columns) ── */}
+      {/* ── Category Filter + Article Grid ── */}
       <section className="py-8 md:py-12 pb-16 md:pb-24" style={{ background: "var(--bg-elevated)" }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {rest.map((article) => (
+          {/* Category Filter */}
+          <FadeUp>
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+              <button
+                onClick={() => setCategoryFilter(null)}
+                className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer"
+                style={{
+                  background: categoryFilter === null ? "var(--accent)" : "var(--bg-card)",
+                  color: categoryFilter === null ? "var(--bg-base)" : "var(--text-secondary)",
+                  fontFamily: "var(--font-body)",
+                }}
+              >
+                All
+              </button>
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setCategoryFilter(cat)}
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer"
+                  style={{
+                    background: categoryFilter === cat ? "var(--accent)" : "var(--bg-card)",
+                    color: categoryFilter === cat ? "var(--bg-base)" : "var(--text-secondary)",
+                    fontFamily: "var(--font-body)",
+                  }}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </FadeUp>
+
+          {/* Article Grid */}
+          <StaggerContainer
+            key={categoryFilter || "all"}
+            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {filtered.map((article) => (
               <StaggerItem key={article.slug}>
                 <Link
                   href={`/blog/${article.slug}`}
@@ -191,6 +238,15 @@ export default function BlogIndexClient({ articles, cta }: Props) {
               </StaggerItem>
             ))}
           </StaggerContainer>
+
+          {filtered.length === 0 && (
+            <p
+              className="py-16 text-center text-lg"
+              style={{ color: "var(--text-muted)" }}
+            >
+              No articles in this category yet.
+            </p>
+          )}
         </div>
       </section>
     </>
