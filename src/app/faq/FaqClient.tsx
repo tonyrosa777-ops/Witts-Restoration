@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import FadeUp from "@/components/animations/FadeUp";
-import RisingAsh from "@/components/animations/RisingAsh";
+
 
 interface FaqItem {
   question: string;
@@ -21,14 +21,13 @@ export default function FaqClient({ faq, meta, cta }: Props) {
     <>
       {/* Page Header */}
       <section
-        className="relative overflow-hidden py-16 md:py-24"
+        className="py-16 md:py-24"
         style={{
           background:
             "radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.08), transparent 70%)",
         }}
       >
-        <RisingAsh />
-        <div className="relative z-10 mx-auto max-w-4xl px-6">
+        <div className="mx-auto max-w-4xl px-6">
           <FadeUp>
             <h1 className="hero-shimmer font-display text-display text-center">
               Frequently Asked Questions

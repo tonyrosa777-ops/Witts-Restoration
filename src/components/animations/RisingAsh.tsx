@@ -30,7 +30,7 @@ export default function RisingAsh() {
     let animId: number;
     const particles: Ash[] = [];
     const isMobile = window.innerWidth < 768;
-    const COUNT = isMobile ? 12 : 25;
+    const COUNT = isMobile ? 18 : 40;
 
     function resize() {
       if (!canvas) return;
