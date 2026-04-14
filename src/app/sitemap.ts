@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { services, serviceAreas } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://wittsrestoration.com";
+  const baseUrl = "https://witts-restoration.vercel.app";
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), priority: 1.0 },

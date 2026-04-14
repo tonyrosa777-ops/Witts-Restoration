@@ -6,7 +6,7 @@ export const siteConfig = {
   name: "Witt's Restoration LLC",
   tagline: "Where We Have the Witt to Make All Your Car Problems Quit",
   domain: "wittsrestoration.com",
-  url: "https://wittsrestoration.com",
+  url: "https://witts-restoration.vercel.app",
   description:
     "24/7 towing and recovery, auto body and paint, vehicle restoration, mobile mechanic, and snowmobile/ATV repair in Groveton, NH. Serving Coos County and the surrounding areas.",
   ogImage: "/og-image.jpg",

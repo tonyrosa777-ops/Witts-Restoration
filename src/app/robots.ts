@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/studio/", "/pricing"],
     },
-    sitemap: "https://wittsrestoration.com/sitemap.xml",
+    sitemap: "https://witts-restoration.vercel.app/sitemap.xml",
   };
 }

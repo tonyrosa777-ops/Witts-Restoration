@@ -37,12 +37,12 @@ export const metadata: Metadata = {
   },
   description:
     "24/7 towing and recovery, auto body and paint, vehicle restoration, mobile mechanic, and snowmobile/ATV repair in Groveton, NH. Serving Coos County and the surrounding areas. Call (802) 751-5786.",
-  metadataBase: new URL("https://wittsrestoration.com"),
+  metadataBase: new URL("https://witts-restoration.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Witt's Restoration LLC",
-    url: "https://wittsrestoration.com",
+    url: "https://witts-restoration.vercel.app",
     title: "Witt's Restoration LLC — 24/7 Towing & Auto Restoration | Groveton, NH",
     description:
       "24/7 towing and recovery, auto body and paint, vehicle restoration, mobile mechanic, and snowmobile/ATV repair in Groveton, NH.",
