@@ -42,6 +42,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Witt's Restoration LLC",
+    url: "https://wittsrestoration.com",
+    title: "Witt's Restoration LLC — 24/7 Towing & Auto Restoration | Groveton, NH",
+    description:
+      "24/7 towing and recovery, auto body and paint, vehicle restoration, mobile mechanic, and snowmobile/ATV repair in Groveton, NH.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Witt's Restoration LLC — 24/7 towing and auto restoration in Groveton, NH",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Witt's Restoration LLC — 24/7 Towing & Auto Restoration",
+    description:
+      "24/7 towing, auto body, restoration, and mobile mechanic in Groveton, NH.",
+    images: ["/og-image.jpg"],
   },
 };
 
